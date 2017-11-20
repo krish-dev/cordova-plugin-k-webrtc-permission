@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-k-webrtc-permission"
+    version="1.0.0">
+    <engines>
+        <engine name="cordova" version=">=5.0.0" />
+    </engines>
+
+    <name>KwebRTCPermission</name>
+    <description>Android permission manager</description>
+    <author>Krishnendu Sekhar Das</author>
+    <keywords>android, permission, marshmallow</keywords>
+    <license>MIT</license>
+
+    <js-module src="www/permission.js" name="permission">
+        <clobbers target="window.plugins.k.webrtc.permission" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <source-file src="src/android/KwebRTCPermission.java" target-dir="src/in/co/indusnet/cordova/plugins/webrtc/permission" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+		</config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="KwebRTCPermission">
+                <param name="android-package" value="in.co.indusnet.cordova.plugins.webrtc.permission.KwebRTCPermission" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
+

@@ -1,0 +1,26 @@
+{
+	"name": "cordova-plugin-k-webrtc-permission",
+	"version": "1.0.0",
+	"description": "Cordova plugin for grand android required permission",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/krish-dev/cordova-plugin-k-webrtc-permission.git"
+	},
+	"keywords": [
+		"Cordova",
+		"Plugin",
+		"android",
+		"permission",
+		"webRTC"
+	],
+	"author": "Krishnendu Sekhar Das",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/krish-dev/cordova-plugin-k-webrtc-permission/issues"
+	},
+	"homepage": "https://github.com/krish-dev/cordova-plugin-k-webrtc-permission#readme"
+}
